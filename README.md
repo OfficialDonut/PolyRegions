@@ -1,2 +1,2 @@
-# PolygonRegion
-Example implementation of a polygon region
+# PolygonRegions
+Example implementation of polygon regions
