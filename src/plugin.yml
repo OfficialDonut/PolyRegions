@@ -1,0 +1,8 @@
+name: PolygonRegions
+version: '1.0'
+author: Donut
+main: us.donut.polygonregions.Main
+
+commands:
+  polygon:
+    description: Polygon creation
