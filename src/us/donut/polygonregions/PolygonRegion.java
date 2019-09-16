@@ -41,7 +41,7 @@ public class PolygonRegion {
             double deltaX = x2 - x1;
 
             if (deltaZ == 0) {
-                // horizontal line so parallel to the line connecting the corners so can't intersect
+                // horizontal line at location is parallel to the line connecting the corners so can't intersect
                 continue;
             }
 
@@ -56,9 +56,9 @@ public class PolygonRegion {
                 x = x1 + ((z - z1) / m);
             }
 
-            if (z > Math.min(z1, z2) && z < Math.max(z1, z2)) { // if z-coord is between the two corners
-                if (x > Math.min(x1, x2) && x < Math.max(x1, x2)) { // if x-coord is between the two corners
-                    if (x > loc.getX()) { // we only care about intersections to the right of the location in question
+            if (z >= Math.min(z1, z2) && z <= Math.max(z1, z2)) { // if z-coord is between the two corners
+                if (x >= Math.min(x1, x2) && x <= Math.max(x1, x2)) { // if x-coord is between the two corners
+                    if (x >= loc.getX()) { // we only care about intersections to the right of the location in question
                         intersectedSides++;
                     }
                 }
