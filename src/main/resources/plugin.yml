@@ -1,0 +1,29 @@
+name: PolyRegions
+version: '0.1'
+author: Donut
+main: us.donut.polyregions.PolyRegionsPlugin
+
+commands:
+    polygon:
+      description: Create a polygon region
+      usage: /polygon
+      permission: polygon.command
+    polyhedron:
+      description: Create a polyhedron region
+      usage: /polyhedron [finish]
+      permission: polyhedron.command
+    regionchecker:
+      description: Toggle region checker
+      usage: /regionchecker
+      permission: regionchecker.command
+
+permissions:
+  polygon.command:
+    description: Allows /polygon
+    default: op
+  polyhedron.command:
+    description: Allows /polyhedron
+    default: op
+  regionchecker.command:
+    description: Allows /regionchecker
+    default: op
