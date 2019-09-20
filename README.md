@@ -20,8 +20,8 @@ PolyRegions is an API for creating polygon and polyhedron regions. The regions c
 #### Polygon regions:
 To create a polygon region you need the locations of the vertices of the polygon (at least 3 vertices are required):
 ```java
-Location[] vetices = ...
-PolygonRegion polygonRegion = new PolygonRegion(vetices);
+Location[] vertices = ...
+PolygonRegion polygonRegion = new PolygonRegion(vertices);
 ```
 To check if a location is in a region, use the contains method:
 ```java
