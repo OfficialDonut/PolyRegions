@@ -6,7 +6,7 @@
 * [How it Works](#how-it-works)
 
 ## Overview
-PolyRegions is an API for creating polygon and polyhedron regions. The regions can be irregularly shaped, they do not have to be regular polygons/polyhedrons. Polygon regions ignore the y-dimension (up/down) whereas polyhedron regions are 3D spaces.
+PolyRegions is an API for creating polygon and polyhedron regions. The regions can be irregularly shaped, they do not have to be regular polygons/polyhedrons. Polygon regions ignore the y-dimension (up/down) whereas polyhedron regions are enclosed 3D spaces.
 
 ## Examples
 
