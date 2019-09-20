@@ -23,6 +23,12 @@ To create a polygon region you need the locations of the vertices of the polygon
 Location[] vetices = ...
 PolygonRegion polygonRegion = new PolygonRegion(vetices);
 ```
+To check if a location is in a region, use the contains method:
+```java
+if (polygonRegion.contains(location)) {
+    ...
+}
+```
 
 #### Polyhedron regions:
 To create a polyhedron region you need to define all of the faces of the polyhedron (at least 3 faces are required). Like a polygon, a polyhedron face is defined by 3+ vetices:
@@ -33,5 +39,19 @@ faces[1] = new PolyhedronFace(face2Vertices);
 faces[2] = new PolyhedronFace(face3Vertices);
 PolygonHedron polyhedronRegion = new PolygonHedron(faces);
 ```
+PolyhedronRegion has a contains method for checking if a location is in the region as well as a forEachBlock method:
+```java
+if (polyhedronRegion.contains(location)) {
+   ...
+}
+```
+```java
+polyhedronRegion.forEachBlock(block -> block.setType(Material.STONE));
+```
 
 ## How it Works
+To check if the a given location is inside a region, the [even-odd rule](https://en.wikipedia.org/wiki/Point_in_polygon) is used. This rule states that if a ray cast from the point intersects the polygon border an even number of times, then the point is outside the polygon, if the number of intersections is odd then the point is inside the region.
+
+![](https://i.imgur.com/vREvsoL.png)
+
+This algorithm also works for polyhedrons, you just count how many times a ray from the point intersects the faces of the polyhedron.
